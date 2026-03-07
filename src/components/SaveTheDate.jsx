@@ -35,6 +35,9 @@ export default function SaveTheDate() {
         <p className="font-body text-sm text-charcoal-700/60 italic tracking-wide">
           Formal invitation to follow
         </p>
+        <p className="font-body text-sm text-charcoal-700/50 mt-4 tracking-wide">
+          We respectfully request an adults-only evening
+        </p>
       </div>
     </section>
   );
