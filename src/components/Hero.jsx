@@ -8,7 +8,7 @@ export default function Hero() {
       {/* Background image with warm overlay */}
       <div className="absolute inset-0">
         <img
-          src="/photos/hero/wedding.jpg"
+          src="/photos/hero/wedding.png"
           alt="Bob and Sherry Hazleton on their wedding day, 1976"
           className="w-full h-full object-cover"
         />

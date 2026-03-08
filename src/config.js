@@ -5,4 +5,7 @@ export const SITE_CONFIG = {
   eventLocation: 'del Alma Restaurant',
   eventCity: 'Corvallis, Oregon',
   photoAlbumUrl: '', // Post-event photo sharing link
+  // Phase 2 notes:
+  // - Use OpenStreetMap embed for map (no Google services)
+  // - All fonts self-hosted (no Google Fonts)
 };
