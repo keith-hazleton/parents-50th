@@ -12,17 +12,14 @@ export default function TheirStory() {
         <div className="section-divider mb-10" />
 
         <p className="font-body text-base md:text-lg leading-relaxed text-charcoal-700/80">
-          Fifty years ago, Bob and Sherry began a journey together that would be
-          filled with love, laughter, and a lifetime of memories. From their
-          wedding day in 1976 to today, their partnership has been the foundation
-          of a family built on warmth, generosity, and devotion.
+          On August 7, 1976, near our nation's capital, Bob and Sherry said "I do" and began a journey together. The
+          next 50 years would take them across the country to Oregon to amazing friends, bringing two loving sons,
+          three adoring granddaughters, and countless camping adventures.
+          From their wedding day to today, their partnership has been the foundation
+          of a family built on care, generosity, and friendship.
         </p>
         <p className="font-body text-base md:text-lg leading-relaxed text-charcoal-700/80 mt-6">
           Please join us as we celebrate this remarkable milestone.
-        </p>
-
-        <p className="font-body text-xs text-charcoal-700/40 mt-10 italic">
-          [Keith — replace this placeholder text with your own words]
         </p>
       </div>
     </section>
