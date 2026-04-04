@@ -3,6 +3,7 @@ import Hero from './components/Hero';
 import SaveTheDate from './components/SaveTheDate';
 import PhotoCarousel from './components/PhotoCarousel';
 import TheirStory from './components/TheirStory';
+import Venue from './components/Venue';
 import Footer from './components/Footer';
 
 export default function App() {
@@ -14,6 +15,7 @@ export default function App() {
       {phase < 3 && <SaveTheDate />}
       <PhotoCarousel />
       <TheirStory />
+      {phase >= 2 && <Venue />}
       <Footer />
     </main>
   );

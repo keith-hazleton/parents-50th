@@ -3,6 +3,7 @@ import { useFadeIn } from '../hooks/useFadeIn';
 
 export default function SaveTheDate() {
   const ref = useFadeIn();
+  const { phase } = SITE_CONFIG;
 
   return (
     <section className="py-20 md:py-28 px-6">
@@ -14,11 +15,11 @@ export default function SaveTheDate() {
         }}
       >
         <p className="font-display text-sm tracking-[0.3em] uppercase text-gold-600 mb-6">
-          Please join us
+          {phase === 1 ? 'Please join us' : 'You are invited'}
         </p>
 
         <h2 className="font-display text-4xl md:text-5xl font-light text-charcoal-800 mb-8">
-          Save the Date
+          {phase === 1 ? 'Save the Date' : 'Celebration Details'}
         </h2>
 
         <div className="section-divider !my-6" />
@@ -26,18 +27,56 @@ export default function SaveTheDate() {
         <p className="font-display text-2xl md:text-3xl text-charcoal-800 font-light mb-2">
           {SITE_CONFIG.eventDate}
         </p>
-        <p className="font-body text-base text-charcoal-700/80 tracking-wide mb-8">
-          {SITE_CONFIG.eventCity}
-        </p>
+        {phase >= 2 && SITE_CONFIG.eventTime && (
+          <p className="font-body text-lg text-charcoal-700/80 tracking-wide mb-1">
+            {SITE_CONFIG.eventTime}
+          </p>
+        )}
+
+        {phase >= 2 ? (
+          <div className="mt-6">
+            <a
+              href={SITE_CONFIG.venueWebsite}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-body text-base text-charcoal-800 hover:text-gold-600 transition-colors tracking-wide block mb-1"
+            >
+              {SITE_CONFIG.eventLocation}
+            </a>
+            <p className="font-body text-sm text-charcoal-700/70 tracking-wide">
+              {SITE_CONFIG.eventAddress}
+            </p>
+            <p className="font-body text-sm text-charcoal-700/70 tracking-wide mb-8">
+              {SITE_CONFIG.eventCity} {SITE_CONFIG.eventZip}
+            </p>
+          </div>
+        ) : (
+          <p className="font-body text-base text-charcoal-700/80 tracking-wide mb-8">
+            {SITE_CONFIG.eventCity}
+          </p>
+        )}
 
         <div className="section-divider !my-6" />
 
-        <p className="font-body text-sm text-charcoal-700/60 italic tracking-wide">
-          Formal invitation to follow
-        </p>
-        <p className="font-body text-sm text-charcoal-700/50 mt-4 tracking-wide">
-          We respectfully request an adults-only evening
-        </p>
+        {phase === 1 ? (
+          <>
+            <p className="font-body text-sm text-charcoal-700/60 italic tracking-wide">
+              Formal invitation to follow
+            </p>
+            <p className="font-body text-sm text-charcoal-700/50 mt-4 tracking-wide">
+              We respectfully request an adults-only evening
+            </p>
+          </>
+        ) : (
+          <>
+            <p className="font-body text-sm text-charcoal-700/60 italic tracking-wide mb-3">
+              Your presence is the only gift we need
+            </p>
+            <p className="font-body text-sm text-charcoal-700/50 tracking-wide">
+              We respectfully request an adults-only evening
+            </p>
+          </>
+        )}
       </div>
     </section>
   );
